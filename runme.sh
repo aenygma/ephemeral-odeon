@@ -2,6 +2,10 @@
 
 SRC_DIR=~/src
 
+# create a work area
+mkdir -p "${SRC_DIR}"
+cd "${SRC_DIR}"
+
 # Start GCP VM instance
 
 
@@ -19,8 +23,6 @@ sudo systemctl start plexmediaserver.service
 # NO IP
 
 #get no-ip updater
-mkdir -p "${SRC_DIR}"
-cd "${SRC_DIR}"
 wget https://www.noip.com/client/linux/noip-duc-linux.tar.gz
 tar xvfz ./noip-duc-linux.tar.gz
 
